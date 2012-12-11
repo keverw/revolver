@@ -48,11 +48,11 @@
 		var checkID = last;
 		if (_validID(checkID))
 		{
-			var next = last + 1;
+			var nextID = last + 1;
 			
-			if (_validID(next))
+			if (_validID(nextID))
 			{
-				last = next;
+				last = nextID;
 			}
 			else
 			{
