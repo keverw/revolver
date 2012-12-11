@@ -1,7 +1,7 @@
 (function ()
 {
 	var newIDCounter = 1;
-	var removedIDs = [];
+	var removedIDs = {};
 	
 	var bullets = {};
 	var last = 1;
@@ -48,7 +48,16 @@
 		var checkID = last;
 		if (_validID(checkID))
 		{
-			last++;
+			var next = last + 1;
+			
+			if (_validID(next))
+			{
+				last = next;
+			}
+			else
+			{
+				last = 1;
+			}
 		}
 		else
 		{
@@ -61,11 +70,18 @@
 		callback(checkID, bullets[checkID]);
 	}
 	
-	function add(bullet, id)
+	function add(bullet, replaceID)
 	{
-		if (id) //add a new bullet using ID, to replace a bullet, removed or existing.
+		if (replaceID) //add a new bullet using ID, to replace a bullet, removed or existing.
 		{
+			if (removedIDs.hasOwnProperty(replaceID))
+			{
+				delete removedIDs[replaceID];
+			}
 			
+			bullets[replaceID] = bullet;
+			
+			return replaceID;
 		}
 		else //add a new bullet
 		{
@@ -80,7 +96,7 @@
 		if (_validID(id))
 		{
 			delete bullets[id];
-			removedIDs.push(id);
+			removedIDs[id] = true;
 		}
 	}
 	

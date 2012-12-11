@@ -9,7 +9,16 @@ db_revolver.remove(1);
 
 console.log(db_revolver.removedIDs);
 
+console.log(db_revolver.add('Hai #2', 1));
+
+console.log(db_revolver.removedIDs);
+
 //fire
+db_revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
 db_revolver.fire(function(id, bullet)
 {
 	console.log(id, bullet);
