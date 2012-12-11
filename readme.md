@@ -1,4 +1,5 @@
 # Revolver #
+**Version 1.0**
 
 A simple generic round-robin. Great for database connections pools.
 
