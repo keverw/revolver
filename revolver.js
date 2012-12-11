@@ -29,15 +29,15 @@
 		
 		for(var newID in bullets)
 		{
-		    if (bullets.hasOwnProperty(newID))
-		    {
-		    	returnID = newID;
-		    	if (newID > id)
-		    	{
-			    	returnID = newID;
-			    	return returnID;
-		    	}
-		    }
+			if (bullets.hasOwnProperty(newID))
+			{
+				returnID = newID;
+				if (newID > id)
+				{
+					returnID = newID;
+					return returnID;
+				}
+			}
 		}
 		
 		return returnID;
@@ -55,7 +55,7 @@
 			var nextID = _findNextId(checkID);
 			
 			checkID = nextID;
-			last = nextID + 1;	
+			last = nextID + 1;
 		}
 		
 		callback(checkID, bullets[checkID]);
