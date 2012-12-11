@@ -1,5 +1,5 @@
 # Revolver #
-**Version 1.0**
+**Version 2.0**
 
 A simple generic round-robin. Great for database connections pools.
 
@@ -11,12 +11,6 @@ To set up diskspace.js on your Node.js server use npm.
 
 ## Sample Usage: ##
 ```
-var test_revolver = require('revolver');
-//Load bullets
-test_revolver.load('Hai');
-test_revolver.load('OMG');
-//fire the bullets(They don't really disappear, just moves to the end of the line)
-console.log(test_revolver.fire())
-console.log(test_revolver.fire())
+TODO: UPDATE FOR V2 USAGE
 ```
 This can be used to store strings or anymost anything.
