@@ -1,9 +1,9 @@
 var db_revolver = require('./revolver.js');
 
 //add bullets
-console.log(db_revolver.load('Hai'));
-console.log(db_revolver.load('OMG'));
-console.log(db_revolver.load('LMAO'));
+console.log(db_revolver.add('Hai'));
+console.log(db_revolver.add('OMG'));
+console.log(db_revolver.add('LMAO'));
 
 db_revolver.remove(1);
 

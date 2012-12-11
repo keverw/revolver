@@ -61,11 +61,18 @@
 		callback(checkID, bullets[checkID]);
 	}
 	
-	function load(bullet)
+	function add(bullet, id)
 	{
-		var id = _grabNewID();
-		bullets[id] = bullet;
-		return id;
+		if (id) //add a new bullet using ID, to replace a bullet, removed or existing.
+		{
+			
+		}
+		else //add a new bullet
+		{
+			var id = _grabNewID();
+			bullets[id] = bullet;
+			return id;
+		}
 	}
 	
 	function remove(id)
@@ -80,7 +87,7 @@
 	// Export public API
 	var revolver = {};
 	revolver.fire = fire;
-	revolver.load = load;
+	revolver.add = add;
 	revolver.remove = remove;
 	revolver.removedIDs = removedIDs;
 	
