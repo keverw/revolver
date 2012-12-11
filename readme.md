@@ -11,7 +11,7 @@ To set up diskspace.js on your Node.js server use npm.
 
 ## Sample Usage: ##
 ```
-var revolver = require('./revolver.js');
+var revolver = require('revolver');
 
 revolver.add('Hai'); //adds a bullet and returns it's id
 
