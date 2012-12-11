@@ -25,12 +25,13 @@
 	
 	function _findNextId(id)
 	{
-		var returnID = 1;
+		var returnID = null;
 		
 		for(var newID in bullets)
 		{
 		    if (bullets.hasOwnProperty(newID))
 		    {
+		    	returnID = newID;
 		    	if (newID > id)
 		    	{
 			    	returnID = newID;
@@ -45,15 +46,16 @@
 	function fire(callback)
 	{
 		var checkID = last;
-		if (_validID(last))
+		if (_validID(checkID))
 		{
 			last++;
 		}
 		else
 		{
 			var nextID = _findNextId(checkID);
+			
 			checkID = nextID;
-			last = nextID + 1;
+			last = nextID + 1;	
 		}
 		
 		callback(checkID, bullets[checkID]);
@@ -80,5 +82,7 @@
 	revolver.fire = fire;
 	revolver.load = load;
 	revolver.remove = remove;
+	revolver.removedIDs = removedIDs;
+	
 	module.exports = revolver;
 }());

@@ -4,9 +4,10 @@ var db_revolver = require('./revolver.js');
 console.log(db_revolver.load('Hai'));
 console.log(db_revolver.load('OMG'));
 console.log(db_revolver.load('LMAO'));
-//fire
 
 //db_revolver.remove(1);
+
+//fire
 
 db_revolver.fire(function(id, bullet)
 {
