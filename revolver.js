@@ -13,21 +13,14 @@
 	
 	function _validID(id)
 	{
-		if (bullets.hasOwnProperty(id))
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return (bullets.hasOwnProperty(id)) ? true : false;
 	}
 	
 	function _findNextId(id)
 	{
 		var returnID = null;
 		
-		for(var newID in bullets)
+		for (var newID in bullets)
 		{
 			if (bullets.hasOwnProperty(newID))
 			{
@@ -49,15 +42,8 @@
 		if (_validID(checkID))
 		{
 			var nextID = last + 1;
-			
-			if (_validID(nextID))
-			{
-				last = nextID;
-			}
-			else
-			{
-				last = 1;
-			}
+
+			last = (_validID(nextID)) ? nextID : 1;
 		}
 		else
 		{
