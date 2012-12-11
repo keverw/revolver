@@ -1,8 +1,8 @@
 {
   "author": "Kevin Whitman (https://github.com/keverw)",
   "name": "revolver",
-  "description": "A simple generic round-robin. Can be used for database connections pools.",
-  "version": "0.1.0",
+  "description": "A simple generic round-robin resource manager. Great for database connections pools.",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/keverw/revolver"

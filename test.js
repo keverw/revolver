@@ -1,21 +1,82 @@
-var db_revolver = require('./revolver.js');
+var revolver = require('./revolver.js');
 
-db_revolver.load('Hai');
-db_revolver.load('OMG');
-db_revolver.load('LMAO');
+//add bullets
+console.log(revolver.add('Hai'));
+console.log(revolver.add('OMG'));
+console.log(revolver.add('LMAO'));
 
-//
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
-db_revolver.load('HI guys');
-console.log(db_revolver.fire())
+//revolver.remove(1);
 
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
+//fire
 
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
-console.log(db_revolver.fire())
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.add('HI guys');
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
+
+revolver.fire(function(id, bullet)
+{
+	console.log(id, bullet);
+});
